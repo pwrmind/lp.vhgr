@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Прими решение!</title>
+</head>
+<body>
+	<style type="text/css">
+		html, body {
+			height: 100%;
+			padding: 0;
+			margin: 0;
+			font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+			text-transform: uppercase;
+			overflow: hidden;
+		}
+		body {
+			background-size: cover;
+			font-size: 2em;
+    		text-shadow: 0px 0px 2px white;
+    		color: white;
+
+		}
+		div {
+			width: 50%;
+			height: 50%;
+			float: left;
+			text-align: center;
+			cursor: pointer;
+			font-size: 3vw;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+		}
+		div:hover {
+			background-color: rgba(0,0,0,0.4);
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+		}
+		/*#div1 { background: #DDD; }
+		#div2 { background: #AAA; }
+		#div3 { background: #777; }
+		#div4 { background: #444; }*/
+		.red {
+			color: #e60101;
+			font-weight: bold;
+			text-shadow: 0px 0px 2px #e60101;
+		}
+		#bg {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			background-size: cover;
+			filter: blur(1px);
+			-webkit-transition: background-image 0.8s ease-in-out;
+			transition: background-image 0.8s ease-in-out;
+		}
+
+	</style>
+	<div id="firstBox"><span>Что произайдёт, если я стану парить и брошу курить?</span></div>
+	<div id="secornBox"><span>Что произайдёт, если я <span class="red">не</span> стану парить и <span class="red">не</span> брошу курить?</span></div>
+	<div id="thirdBox"><span>Чего <span class="red">не</span> произайдёт, если я стану парить и брошу курить?</span></div>
+	<div id="fourthBox"><span>Чего <span class="red">не</span> произайдёт, если я <span class="red">не</span> стану парить и <span class="red">не</span> брошу курить?</span></div>
+	<div id="bg"></div>
+	
+	<script type="text/javascript">
+		var bg = document.querySelector("#bg");
+		var firstBox = document.querySelector("#firstBox");
+		var secornBox = document.querySelector("#secornBox");
+		var thirdBox = document.querySelector("#thirdBox");
+		var fourthBox = document.querySelector("#fourthBox");
+
+		firstBox.addEventListener("mousemove", function() {
+			bg.style.backgroundImage = "url(/images/bg_001.jpg)";
+		});
+
+		secornBox.addEventListener("mousemove", function() {
+			bg.style.backgroundImage = "url(/images/bg_003.jpg)";
+		});
+
+		thirdBox.addEventListener("mousemove", function() {
+			bg.style.backgroundImage = "url(/images/bg_002.jpg)";
+		});
+
+		fourthBox.addEventListener("mousemove", function() {
+			bg.style.backgroundImage = "url(/images/bg_004.jpg)";
+		});
+	</script>
+</body>
+</html>
