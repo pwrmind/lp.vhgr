@@ -58,6 +58,7 @@
 			-webkit-transition: background-image 0.4s ease-in-out;
 			transition: background-image 0.4s ease-in-out;
 			background-color: black;
+			background-image: url(images/bg_001.jpg);
 		}
 		#details {
 			position: fixed;
@@ -74,6 +75,16 @@
 	<div id="fourthBox" class="box"><span>Чего <span class="red">не</span> произойдёт, если я <span class="red">не</span> стану парить и <span class="red">не</span> брошу курить?</span></div>
 	<div id="bg"></div>
 	<script type="text/javascript">
+		(function() {
+			var images = ["images/bg_001.jpg", "images/bg_002.jpg", "images/bg_003.jpg", "images/bg_004.jpg"];
+			for(var i in images) {
+				var img = new Image();
+				/*img.onload = function () {
+				   console.log("image is loaded");
+				}*/
+				img.src = images[i];
+			}
+		})();
 		var bg = document.querySelector("#bg");
 		var detailsBox = document.querySelector("#details");
 		var firstBox = document.querySelector("#firstBox");
@@ -86,7 +97,7 @@
 		});
 
 		firstBox.addEventListener("click", function() {
-			detailsBox.style.display = "block";
+			//detailsBox.style.display = "block";
 			//bg.style.backgroundImage = "url(images/bg_001.jpg)";
 			// firstBox.style.width = "100%";
 			// firstBox.style.height = "100%";
