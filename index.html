@@ -31,6 +31,9 @@
 			justify-content: center;
 			flex-direction: column;
 			border-radius: 4px;
+			transition: width 0.8s ease-in-out;
+			transition: height 0.8s ease-in-out;
+			box-shadow: inset 0px 0px 8px rgba(0,0,0,1);
 		}
 		.box:hover {
 			background-color: rgba(0,0,0,0.4);
@@ -56,6 +59,13 @@
 			transition: background-image 0.4s ease-in-out;
 			background-color: black;
 		}
+		#details {
+			position: fixed;
+			margin: auto;
+			display: none;
+			background-color: rgba(0,0,0,0.6);
+			border-radius: 4px;
+		}
 
 	</style>
 	<div id="firstBox" class="box"><span>Что произойдёт, если я стану парить и брошу курить?</span></div>
@@ -63,9 +73,9 @@
 	<div id="thirdBox" class="box"><span>Чего <span class="red">не</span> произойдёт, если я стану парить и брошу курить?</span></div>
 	<div id="fourthBox" class="box"><span>Чего <span class="red">не</span> произойдёт, если я <span class="red">не</span> стану парить и <span class="red">не</span> брошу курить?</span></div>
 	<div id="bg"></div>
-	
 	<script type="text/javascript">
 		var bg = document.querySelector("#bg");
+		var detailsBox = document.querySelector("#details");
 		var firstBox = document.querySelector("#firstBox");
 		var secornBox = document.querySelector("#secornBox");
 		var thirdBox = document.querySelector("#thirdBox");
@@ -73,6 +83,17 @@
 
 		firstBox.addEventListener("mousemove", function() {
 			bg.style.backgroundImage = "url(images/bg_001.jpg)";
+		});
+
+		firstBox.addEventListener("click", function() {
+			detailsBox.style.display = "block";
+			//bg.style.backgroundImage = "url(images/bg_001.jpg)";
+			// firstBox.style.width = "100%";
+			// firstBox.style.height = "100%";
+			// secornBox.style.display = "none";
+			// thirdBox.style.display = "none";
+			// fourthBox.style.display = "none";
+
 		});
 
 		secornBox.addEventListener("mousemove", function() {
