@@ -20,6 +20,18 @@
     		text-shadow: 0px 0px 2px white;
     		color: white;
 		}
+
+		#mainBox {
+			width: 100%;
+			height: calc(100% - 40px);
+		}
+
+		#footerBox {
+			width: 100%;
+			height: 40px;
+			background-color: rgba(0,0,0,0.8);
+		}
+
 		.box {
 			width: 50%;
 			height: 50%;
@@ -35,6 +47,7 @@
 			transition: height 0.8s ease-in-out;
 			box-shadow: inset 0px 0px 8px rgba(0,0,0,1);
 		}
+		
 		.box:hover {
 			background-color: rgba(0,0,0,0.4);
 			box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
@@ -43,12 +56,16 @@
 		#div2 { background: #AAA; }
 		#div3 { background: #777; }
 		#div4 { background: #444; }*/
+		
 		.red {
 			color: #e60101;
 			font-weight: bold;
 			text-shadow: 0px 0px 2px #e60101;
 		}
+
 		#bg {
+			top: 0px;
+			left: 0px;
 			position: fixed;
 			width: 100%;
 			height: 100%;
@@ -60,6 +77,7 @@
 			background-color: black;
 			background-image: url(images/bg_001.jpg);
 		}
+
 		#details {
 			position: fixed;
 			margin: auto;
@@ -69,10 +87,13 @@
 		}
 
 	</style>
-	<div id="firstBox" class="box"><span>Что произойдёт, если я стану парить и брошу курить?</span></div>
-	<div id="secornBox" class="box"><span>Что произойдёт, если я <span class="red">не</span> стану парить и <span class="red">не</span> брошу курить?</span></div>
-	<div id="thirdBox" class="box"><span>Чего <span class="red">не</span> произойдёт, если я стану парить и брошу курить?</span></div>
-	<div id="fourthBox" class="box"><span>Чего <span class="red">не</span> произойдёт, если я <span class="red">не</span> стану парить и <span class="red">не</span> брошу курить?</span></div>
+	<div id="mainBox">
+		<div id="firstBox" class="box"><span>Что произойдёт, если я стану парить и брошу курить?</span></div>
+		<div id="secornBox" class="box"><span>Что произойдёт, если я <span class="red">не</span> стану парить и <span class="red">не</span> брошу курить?</span></div>
+		<div id="thirdBox" class="box"><span>Чего <span class="red">не</span> произойдёт, если я стану парить и брошу курить?</span></div>
+		<div id="fourthBox" class="box"><span>Чего <span class="red">не</span> произойдёт, если я <span class="red">не</span> стану парить и <span class="red">не</span> брошу курить?</span></div>
+	</div>
+	<div id="footerBox"></div>
 	<div id="bg"></div>
 	<script type="text/javascript">
 		(function() {
